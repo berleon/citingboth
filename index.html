@@ -1,0 +1,61 @@
+<html>
+<head>
+  <script type='text/javascript' src='semantic_scholar_request.js'></script>
+
+  <meta charset="utf-8">
+  <title>Which Papers cite both?</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!--<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">-->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/three-dots.min.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="row" style='margin-top:10%;margin-bottom:5%'>
+      <h1>Which Papers cite?</h1>
+    </div>
+    <div class="row">
+    <label>Paste Semantic Scholar Paper Url</label>
+    <input id="url1" style="width:100%" type="text" value="https://www.semanticscholar.org/paper/On-Pixel-Wise-Explanations-for-Non-Linear-Decisions-Bach-Binder/17a273bbd4448083b01b5a9389b3c37f5425aac0"><br>
+    <label>Paste Semantic Scholar Paper Url</label>
+    <input id="url2" style="width:100%" type="text" value="https://www.semanticscholar.org/paper/..."><br>
+
+    <input class="button-primary" type="button" onclick='renderPapersCitingBoth()' size=20 value='Find paper citing both!'>
+    </div>
+    <hr>
+    <div class="row">
+      <div style="margin: 0 auto; width:1%">
+        <div id='load-spinner' style="display:none" class="dot-spin"></div>
+      </div>
+    </div>
+
+    <div id="results">
+      <p id="result_description">
+      </p>
+      <ol id='result_list'>
+      </ol>
+    </div>
+  </div>
+</body>
+<script type='text/javascript' >
+  //getPapers()
+</script>
+</html>

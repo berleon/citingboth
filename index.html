@@ -3,7 +3,7 @@
   <script type='text/javascript' src='semantic_scholar_request.js'></script>
 
   <meta charset="utf-8">
-  <title>Which Papers cite both?</title>
+  <title>Citing X and Y?</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -30,15 +30,31 @@
 
   <div class="container">
     <div class="row" style='margin-top:10%;margin-bottom:5%'>
-      <h1>Which Papers cite?</h1>
+      <h1>Find all papers citing X and Y</h1>
     </div>
     <div class="row">
-    <label>Paste Semantic Scholar Paper Url</label>
-    <input id="url1" style="width:100%" type="text" value="https://www.semanticscholar.org/paper/On-Pixel-Wise-Explanations-for-Non-Linear-Decisions-Bach-Binder/17a273bbd4448083b01b5a9389b3c37f5425aac0"><br>
-    <label>Paste Semantic Scholar Paper Url</label>
-    <input id="url2" style="width:100%" type="text" value="https://www.semanticscholar.org/paper/..."><br>
+      <div class="seven columns">
+        <p>
+        This tool allows you to find out if two research branches ever crossed. Have you ever wondered if someone applied neural networks to detect wildlife before? With this tool, you can find it out: Paste some highly cited neural network papers  (<a href="https://www.semanticscholar.org/paper/Adam%3A-A-Method-for-Stochastic-Optimization-Kingma-Ba/a6cb366736791bcccc5c8639de5a8f9636bf87e8">Adam</a>,
+        <a href="https://www.semanticscholar.org/paper/You-Only-Look-Once%3A-Unified%2C-Real-Time-Object-Redmon-Divvala/f8e79ac0ea341056ef20f2616628b3e964764cfd">YOLO</a>,
+        <a href="https://www.semanticscholar.org/paper/How-transferable-are-features-in-deep-neural-Yosinski-Clune/081651b38ff7533550a3adfc1c00da333a8fe86c">Feature Transfer</a>)
+        and different wildlife papers (<a href="https://www.semanticscholar.org/paper/Camera-trap%2C-line-transect-census-and-track-a-Silveira-J%C3%A1como/8bb30fc0fa01b9458565c8f986fa8e515c55bb5a">Camera trap</a>,
+        <a href="https://www.semanticscholar.org/paper/In-the-absence-of-a-%E2%80%9Clandscape-of-fear%E2%80%9D%3A-How-lions%2C-Swanson-Arnold/7057c0414ad32fbf9f61ef8eb12633e56a25268d">lions, hyenas, and cheetahs</a>,
+        <a href="https://www.semanticscholar.org/paper/Data-acquisition-and-management-software-for-camera-Fegraus-Lin/cf719a92af90614b203b393c500ba30e87186ab1">another wildlife camera trap</a>).
+        </p>
+        <p>
+        If you use the tool well, you might be able to write <em>"We are the first to applied X to Y."</em> and delete the <em>"To the best of our knowledge,"</em> phrase.
+      </div>
+    </div>
+    <div class="row">
+      <div class="seven columns">
+        <label>Paste a Semantic Scholar url to X</label>
+        <input id="url1" style="width:100%" type="text" value="https://www.semanticscholar.org/paper/How-transferable-are-features-in-deep-neural-Yosinski-Clune/081651b38ff7533550a3adfc1c00da333a8fe86c"><br>
+        <label>Paste a Semantic Scholar url to Y</label>
+        <input id="url2" style="width:100%" type="text" value="https://www.semanticscholar.org/paper/In-the-absence-of-a-%E2%80%9Clandscape-of-fear%E2%80%9D%3A-How-lions%2C-Swanson-Arnold/7057c0414ad32fbf9f61ef8eb12633e56a25268d" ><br>
 
-    <input class="button-primary" type="button" onclick='renderPapersCitingBoth()' size=20 value='Find paper citing both!'>
+        <input class="button-primary" type="button" onclick='renderPapersCitingBoth()' size=20 value='Find papers citing both!'>
+      </div>
     </div>
     <hr>
     <div class="row">
@@ -52,6 +68,15 @@
       </p>
       <ol id='result_list'>
       </ol>
+    </div>
+    <div class="row">
+      <hr>
+      <div class="seven columns">
+        <p>
+        The tool is built on the <a href="https://api.semanticscholar.org/">Semantic Scholar API</a>.
+        Created by <a href="https://userpage.fu-berlin.de/leonsixt/">Leon Sixt</a>.
+        </p>
+      </div>
     </div>
   </div>
 </body>

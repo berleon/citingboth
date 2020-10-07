@@ -31,7 +31,12 @@ function renderPapersCitingBoth() {
       console.log(refIntersect);
 
 
-      result_description.innerHTML = `<b>${papers[0]['title']}</b> and <b>${papers[1]['title']}</b> are cited by <b>${refIntersect.length}</b> papers:`;
+      result_description.innerHTML = `
+         Found <b>${refIntersect.length}</b> papers that cite:
+         <ul>
+            <li><b>${papers[0]['title']}</b></li>
+            <li><b>${papers[1]['title']}</b></li>
+         </ul>`;
 
       result_list.textContent = '';
       refIntersect.map(refId => {
@@ -44,8 +49,8 @@ function renderPapersCitingBoth() {
         elem += "  (" + ref['year'] + ")";
         li.innerHTML = elem
         result_list.appendChild(li);
-        load_spinner.setAttribute('style', 'display:none');
       });
+      load_spinner.setAttribute('style', 'display:none');
   }
   );
 }

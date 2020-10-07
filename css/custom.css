@@ -8,6 +8,9 @@ a {
 
 
 #result_description {
-    font-size: 1.8rem;
+    /*font-size: 1.8rem;*/
 }
 
+#url1, #url2 {
+    font-family: monospace;
+}
